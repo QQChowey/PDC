@@ -1,0 +1,799 @@
+/*
+ Styling
+ */
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/*
+ Header styling
+ red - PUZZLE
+ blue - DAMAGE
+ green - CALC
+ */
+
+#title {
+	background-color: none;
+	margin: 5px 0 5px 0;	
+	height: 70px;
+	width: 430px; 
+}
+
+#title #red {
+	color: red;
+	display: inline-block;
+	font-size: 50px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+	line-height: 5px;
+}
+
+#title #blue {
+	color: cyan;
+	display: inline-block;
+	font-size: 50px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+	line-height: 5px;
+}
+
+#title #green {
+	color: limegreen;
+	display: inline-block;
+	font-size: 50px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+	line-height: 5px;
+}
+
+/*
+ PT Display Screen Btn
+ */
+
+#ptdispBtnContainer {
+	background-color: none;
+	line-height: 50px;
+	margin: 1px 0 1px 0;
+	height: 50px;
+	width: 562px;
+}
+
+.button {
+	background-color: #E0FFFF;
+	border: 1px solid #007AFF;
+	box-sizing: border-box;
+	color: #007AFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	vertical-align: middle;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+/*
+ 2P / 3P switch
+ Team A B C switch
+ */
+
+#ptSwitchContainer {
+	background-color: none;
+	margin: 1px 0 1px 0;
+	height: 50px;
+	line-height: 50px;
+	width: 562px;
+}
+
+#teamSwitch {
+	background-color: none;
+	display: inline-block;
+	margin: 0 1px 0 1px;
+	height: 100%;
+	width: 279px;
+}
+
+#playerSwitch {
+	background-color: none;
+	display: inline-block;
+	margin: 0 1px 0 1px;
+	height: 100%;
+	width: 279px;
+}
+
+	/* 2 Option Switch */
+
+#ptSwitchContainer .switch_2opt {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+#ptSwitchContainer .switch_2opt input{
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+#ptSwitchContainer .switch_2opt label {
+	background-color: #E0FFFF;
+	border: 1px solid #007AFF;
+	box-sizing: border-box;
+	color: #007AFF;
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	text-align: center;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	height: 100%;
+	width: 50%;
+}
+
+#ptSwitchContainer .switch_2opt label:hover {
+	cursor: pointer;
+}
+
+#ptSwitchContainer .switch_2opt input:checked + label {
+	background-color: #007AFF;
+	color: #E0FFFF;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#ptSwitchContainer .switch_2opt label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+#ptSwitchContainer .switch_2opt label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+	/* 3 Option Switch */
+
+#ptSwitchContainer .switch_3opt {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+#ptSwitchContainer .switch_3opt input{
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+#ptSwitchContainer .switch_3opt label {
+	background-color: #E0FFFF;
+	border: 1px solid #007AFF;
+	box-sizing: border-box;
+	color: #007AFF;
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+	text-align: center;
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-ms-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	height: 100%;
+	width: 33.3%; /* for older browsers */
+	width: calc(100% / 3);
+}
+
+#ptSwitchContainer .switch_3opt label:hover {
+	cursor: pointer;
+}
+
+#ptSwitchContainer .switch_3opt input:checked + label {
+	background-color: #007AFF;
+	color: #E0FFFF;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+#ptSwitchContainer .switch_3opt label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+#ptSwitchContainer .switch_3opt label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+/*
+ Player Teams' Table
+ */
+
+#teamTable {
+	background-color: none;
+	margin: 1px 0 1px 0;
+	height: 960px;
+	width: 562px;
+}
+
+  /*Styling of PT Table header*/
+
+#teamTable table {
+	border: 1px solid #0099CC;
+	border-collapse: collapse;
+	height: 100%;
+	width: 100%;
+}
+
+#teamTable th {
+	background-color: #E6E6FA;
+	font-weight: normal;
+	font-size: 15px;
+	height: 4%;
+	width: 36%;
+}
+
+#teamTable th:first-child {
+	border-right: 1px solid #0099CC;
+	width: 28%; /*unless it is first column*/
+}
+
+#teamTable th:last-child {
+	border-left: 1px solid #0099CC;
+}
+
+	/* Styling of td cells 
+		a1	b1	c1
+		a2	b2	c2
+	*/
+
+#teamTable .a1 {
+	background-color: #E6E6FA;
+	border-top: 1px solid #0099CC;
+	border-right: 1px solid #0099CC;
+	font-size: 14px;
+	text-align: center;
+	height: 2%;
+}
+
+#teamTable .a2 {
+	background-color: #E6E6E6;
+	border-top: 1px solid #0099CC;
+	border-right: 1px solid #0099CC;
+	color: #007AFF;
+	cursor: pointer;
+	text-align: center;
+	height: 13%;
+
+}
+
+#teamTable .b1 {
+	border-top: 1px solid #0099CC;
+	background-color: #E6E6FA;
+	font-size: 14px;
+	text-align: center;
+	height: 2%;
+}
+
+#teamTable .b2 {
+	border-top: 1px solid #0099CC;
+	padding: 0px;
+	text-align: center;
+	height: 13%;
+}
+
+	/* Styling of .b2 table elements*/
+
+#teamTable .b2 table {
+	border: none;
+}
+
+#teamTable .b2 tr:first-child td {
+	background-color: white;
+}
+
+#teamTable .b2 tr:nth-child(2) td {
+	background-color: #E6E6FA;
+}
+
+#teamTable .b2 tr:nth-child(3) td {
+	background-color: white;
+}
+
+#teamTable .b2 tr:last-child td {
+	background-color: #E6E6FA;
+} 
+
+#teamTable .b2 td {
+	height: 25%;
+	width: 25%;
+}
+
+#teamTable .b2 .input {
+	color: #4682B4;
+	-webkit-appearance: none;
+}
+
+#teamTable input {
+	border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+   	color: #4682B4;
+   	font-family: "Times New Roman", Times, serif;
+
+}
+
+#teamTable .b2 .latentcell {
+	color: #4682B4;
+	cursor: pointer;
+}
+
+#teamTable .c1 {
+	background-color: #F0F7FF;
+	border-top: 1px solid #0099CC;
+	border-left: 1px solid #0099CC;
+	font-size: 14px;
+	padding-left: 4px;
+	height: 2%;
+}
+
+#teamTable .c2 {
+	background-color: #F0F7FF;
+	border-left: 1px solid #0099CC;
+	text-align: center;
+	height: 13%;
+}
+
+/*
+ Overlay - Monster Select
+ */
+
+#searchMonsterOverlay {
+	background-color: white;
+	box-shadow: 5px 0px rgba(150, 150, 150, 0.8);
+	overflow-x: hidden;
+	top: 0;
+	left: 0;
+	position: fixed;
+	transition: 0.5s;
+	z-index: 2;
+	height: 100%;
+	width: 0;
+}
+
+#exitMonsterOverlay {
+	background-color: none;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	width: 0%;
+}
+
+#MOheader {
+	background-color: none;
+	white-space: nowrap; 
+	height: 50px;
+	width: 100%;
+}
+
+#MOheader #backbtn {
+	background-color: none;
+	color: #007AFF;
+	cursor: pointer;
+	float: left;
+	font-size: 20px;
+	overflow-x: hidden;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	width: 15%;
+}
+
+#MOheader #searchContainer {
+	background-color: none;
+	float: left;
+	height: 100%;
+	width: 75%;
+}
+
+#searchContainer input[type=text] {
+	border: 1px solid gray;
+	box-sizing: border-box;
+	border-radius: 6px 6px 6px 6px;	
+	font-size: 14px;
+	margin: 5px;
+	padding: 4px 10px 4px 10px;
+	height: 40px;
+	width: 90%; /*for older browsers*/
+	width: calc(100% - 10px);
+}
+
+#MOheader #keepSwitchContainer {
+	float: left;
+	height: 100%;
+	width: 10%;
+}
+
+#keepSwitchContainer #keepSwitch {
+	background: linear-gradient(to top, #2A8EBF, #CBE9F6);
+	border: 1px solid gray;
+	box-sizing: border-box;
+	border-radius: 6px 6px 6px 6px;
+	color: white;
+	margin: 5px;
+	text-align: center;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
+	height: 40px;
+	line-height: 40px;
+	width: 40px;
+}
+
+#MOfilter {
+	overflow: hidden;
+	height: 0px;
+	width: 100%;
+}
+
+#MOfilterHead {
+	background-color: #F0F7FF;
+	white-space: nowrap;
+	height: 50px;
+	width: 100%;
+}
+
+#MOfilterHead #filterBtn {
+	color: #007AFF;
+	cursor: pointer;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	height: 100%;
+	line-height: 50px;
+	width: 60%;
+}
+
+#MOfilterHead #resetBtn {
+	color: #007AFF;
+	cursor: pointer;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	height: 100%;
+	line-height: 50px;
+	width: 40%;
+}
+
+#MOlist {
+	overflow-y: auto;
+	height: calc(100% - 100px); /* adjusted with open/closeMOfilter(); */
+	width: 100%;
+}
+
+#MOlist .display {
+	border-bottom: 1px solid gray;
+	box-sizing: border-box;
+	white-space: nowrap;
+	height: 160px;
+	width: 550px;
+}
+
+.display .leftContainer {
+	background-color: pink;
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 120px;
+}
+
+.display .pic {
+	background-color: gray;
+	margin: 5px;
+	height: 110px;
+	width: 110px;
+}
+
+.display .typerow {
+	margin-top: -5px;
+}
+
+.display .type {
+	background-color: gray;
+	display: inline-block;
+	margin: 0 0 5px 5px ;
+	height: 33px;
+	height: calc(100px / 3);
+	width: 33px;
+	width: calc(100px / 3);
+}
+
+.display .rightContainer {
+	background-color: none;
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 430px;
+}
+
+.display .row {
+	height: 30px;
+	width: 100%;
+}
+
+.display .row2 {
+	background-color: purple;
+	height: 34px;
+	line-height: 34px;
+	width: 100%;
+}
+
+.display .name {
+	font-size: 18px;
+	padding-left: 5px;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	overflow-x: scroll;
+	width: 98%;
+	width: calc(100% - 5px);
+}
+
+.display .statText {
+	display: inline-block;
+	font-size: 18px;
+	padding-left: 5px;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	width: auto;
+}
+
+.display .hp {
+	display: inline-block;
+	font-size: 18px;
+	padding-left: 5px;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	width: 17%;
+}
+
+.display .atk {
+	display: inline-block;
+	font-size: 18px;
+	padding-left: 5px;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	width: 15%;
+}
+
+.display .rcv {
+	display: inline-block;
+	font-size: 18px;
+	padding-left: 5px;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	width: 15%;
+}
+
+.display .rarity {
+	display: inline-block;
+	font-size: 18px;
+	padding-left: 5px;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 30px;
+	width: 10%;
+}
+
+.display .awakening {
+	background-color: gray;
+	display: inline-block;
+	margin: 5px;
+	margin-right: 0;
+	vertical-align: middle;
+	height: 24px;
+	width: 24px;
+}
+
+.display .awakening:last-child {
+	margin-right: 5px;
+}
+
+.display .regAwakening {
+	display: inline-block;
+	height: 34px;
+	width: 266px;
+}
+
+.display .superAwakening {
+	border: 1px solid purple;
+	display: inline-block;
+	vertical-align: middle;
+	height: 34px;
+	width: 92px;
+}
+
+/*
+ Overlay - More Options (Inherits, Eggs, etc)
+ */
+
+#optionOverlay {
+	background-color: white;
+	box-shadow: 0px 0px 10px rgba(150, 150, 150, 0.8);
+	overflow-x: hidden;
+	top: 20%;
+	left: 50px;
+	opacity: 0;
+	position: fixed;
+	transition: opacity .25s ease-in-out;
+	z-index: 2;
+	height: 300px;
+	width: 0;
+}
+
+#exitOptionOverlay {
+	background-color: none;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1;
+	height: 100%;
+	width: 0%;
+}
+
+/*
+ Select Team
+ Data Update ??????????????????????????????
+ */
+
+#selectTeamBtn {
+	background-color: lightblue;
+	display: inline-block;
+	margin: 1px;
+	height: 40px;
+	width: 279px;
+}
+
+#updateBtn {
+	background-color: lightblue;
+	display: inline-block;
+	margin: 1px;
+	height: 40px;
+	width: 279px;
+}
+
+/*
+ Stat Table
+ */
+
+#statTable {
+	background-color: lightblue;
+	margin: -3px 0 1px 0;
+	height: 480px;
+	width: 562px;
+}
+
+/*
+ Select Dungeon
+ */
+
+#selDungeon {
+	background-color: lightblue;
+	margin-top: 1px;
+	height: 40px;
+	width: 562px;
+}
+
+/*
+ Dungeon Info
+ */
+
+#infoDungeon {
+	background-color: pink;
+	margin-bottom: 3px;
+	height: 160px;
+	/*width: 108px;*/
+	width: 562px;
+}
+
+/*
+ Board Size Text + Switch
+ */
+
+#sizeBoard {
+	background-color: lightblue;
+	margin: 2px 0 2px 0;
+	height: 50px;
+	width: 562px; /*2/5*/
+}
+
+/*
+ Board Menu
+ - Clear, Combo, HP, Buff, etc. panel
+ */
+
+#boardMenu {
+	background-color: lightblue;
+	margin: 2px 0 2px 0;
+	height: 120px;
+	width: 562px;
+}
+
+/*
+ Board / Orb Selection
+ */
+
+#selBoard {
+	background: lightblue;
+	margin: 1px 0 1px 0;
+	height: 340px;
+	width: 562px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
