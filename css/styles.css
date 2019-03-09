@@ -487,6 +487,7 @@
 #MOlist .display {
 	border-bottom: 1px solid gray;
 	box-sizing: border-box;
+	cursor: pointer;
 	white-space: nowrap;
 	height: 160px;
 	width: 550px;
