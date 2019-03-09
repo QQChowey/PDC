@@ -58,7 +58,7 @@ request.onload = function() {
 		newpic = document.createElement("img");
 		newpic.className = "pic";
 		newpic.alt = monster[i]['id'];
-		newpic.src = "https://raw.githubusercontent.com/QQChowey/PDC/updateFiles/images/portrait/" + monster[i]['id'] + ".png";
+		newpic.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/portrait/" + monster[i]['id'] + ".png";
 
 		newtyperow = document.createElement("div");
 		newtyperow.className = "typerow";
