@@ -1,10 +1,10 @@
 window.onload = function() {
     if (window.jQuery) {  
         // jQuery is loaded  
-        alert("Yeah!");
+        alert("jQuery loaded");
     } else {
         // jQuery is not loaded
-        alert("Doesn't Work");
+        alert("no jQuery");
     }
 }
 
@@ -46,12 +46,11 @@ request.onload = function() {
 	var newdisplay, newleft, newpic, newtype1, newtype2, newtype3;
 	var newright, newrow1, newname, newrow2, newstat1, newhp, newstat2, newatk, newstat3, newrcv, newstat4, newrarity, newrow3;
 	for (var i = 0; i < monster.length; i++) {
-
-		if ( i == 0) {
-			alert(!monster[i]["type2"]);
-		}
 		newdisplay = document.createElement("div");
 		newdisplay.className = "display";
+		newdisplay.addEventListener("click", function(e) {
+    		alert('something');
+		}, false);
 
 		newleft = document.createElement("span");
 		newleft.className = "leftContainer";
@@ -59,20 +58,20 @@ request.onload = function() {
 		newpic = document.createElement("img");
 		newpic.className = "pic";
 		newpic.alt = monster[i]['id'];
-		//newpic.src = "http://www.puzzledragonx.com/en/img/book/" + monster[i]['id'] + ".png";
+		newpic.src = "https://raw.githubusercontent.com/QQChowey/PDC/updateFiles/images/portrait/" + monster[i]['id'] + ".png";
 
 		newtyperow = document.createElement("div");
 		newtyperow.className = "typerow";
 
 		newtype1 = document.createElement("img");
 		newtype1.className = "type";
-		newtype1.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/awakes/" + monster[i]["type"] + ".png";
+		newtype1.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/type/" + monster[i]["type"] + ".png";
 		newtype1.alt = monster[i]["type"]
 
 		newtype2 = document.createElement("img");
 		newtype2.className = "type";
 		if (monster[i]["type2"] != null) {
-			newtype2.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/awakes/" + monster[i]["type2"] + ".png";
+			newtype2.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/type/" + monster[i]["type2"] + ".png";
 		}
 		else { 
 			newtype2.style.display = "none";
@@ -82,7 +81,7 @@ request.onload = function() {
 		newtype3 = document.createElement("img");
 		newtype3.className = "type";
 		if (monster[i]["type3"] != null) {
-			newtype3.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/awakes/" + monster[i]["type3"] + ".png";
+			newtype3.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/type/" + monster[i]["type3"] + ".png";
 		}
 		else { 
 			newtype3.style.display = "none";
@@ -144,6 +143,7 @@ request.onload = function() {
 		for (var j = 0; j < monster[i]['awoken_skills'].length; j++) {
 			newawake = document.createElement("img");
 			newawake.className = "awakening";
+			newawake.src = "https://raw.githubusercontent.com/QQChowey/PDC/master/images/awake/" + monster[i]['awoken_skills'][j] + ".png";
 			newawake.alt = monster[i]['awoken_skills'][j];
 
 			newregawake.append(newawake);
@@ -181,14 +181,11 @@ request.onload = function() {
 	}
 }
 
-//function fillMOlist() {
-//	alert(monsterjson[5].name);
-//}
-
 /*
  * Add handleClicks for A - B - C later
  * maybe prompt delete of C?
  */
+
 var currentValue = "1";
 
 function handleSwitchClick(switch_team) {
@@ -299,10 +296,12 @@ function handleSwitchClick(switch_team) {
  more info.
  */
 
-function LR_openOverlay(e) {
+function LR_openOverlay(e, element) {
 	e = e || window.event;
 	switch(e.which) {
-		case 1: openMonsterOverlay(); break;
+		case 1: 
+			openMonsterOverlay(); 
+			break;
 		case 3: openOptionOverlay(); break;
 	}
 }
